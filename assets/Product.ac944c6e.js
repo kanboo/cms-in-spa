@@ -1,0 +1,1 @@
+import{e as s,o as a,c,a as e,t as o,f as r}from"./index.1e8e2af2.js";const l={class:"w-full h-full flex flex-col justify-center items-center pt-20 space-y-5"},n=e("p",{class:"text-3xl"},"Product page",-1),u={class:"text-2xl text-red-500"},f={name:"Product",setup(p){const t=s();return(_,d)=>(a(),c("main",l,[n,e("p",u,"Product Id: "+o(r(t).params.id),1)]))}};export{f as default};

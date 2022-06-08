@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as s,a as c}from"./index.275bffee.js";const o={},a={class:"w-full h-full flex justify-center items-center pt-20"},n=c("p",{class:"text-9xl"},"About page",-1),r=[n];function _(l,f){return t(),s("main",a,r)}var u=e(o,[["render",_]]);export{u as default};
