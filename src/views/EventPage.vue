@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onBeforeMount } from "vue";
+import { onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
@@ -14,20 +14,15 @@ const triggerRedirect = (data) => {
   });
 };
 
+const offNavigateBehindTo =
+  window.HANDSUP_CMS.onNavigateBehindTo(triggerRedirect);
+
 onMounted(() => {
   window.HANDSUP_CMS.build();
-
-  window.HANDSUP_CMS.on(
-    window.HANDSUP_CMS.EVENT.NAVIGATE_BEHIND_TO,
-    triggerRedirect
-  );
 });
 
-onBeforeMount(() => {
-  window.HANDSUP_CMS.off(
-    window.HANDSUP_CMS.EVENT.NAVIGATE_BEHIND_TO,
-    triggerRedirect
-  );
+onUnmounted(() => {
+  offNavigateBehindTo?.();
 });
 </script>
 
